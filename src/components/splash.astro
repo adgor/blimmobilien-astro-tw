@@ -1,0 +1,65 @@
+---
+import { generateImage } from "astro-eleventy-img";
+import { Icon } from "astro-icon";
+import Starfield from "~/components/starfield.astro";
+import HeroImage from "~/components/hero-image.astro";
+
+const widths = [450, 800, 1200];
+// const sizes = "(min-width: 640px) 42vw, 67vw";
+const sizes = "100vw";
+
+const { webp, avif, png } = generateImage("src/assets/slider_2.png", {
+  widths,
+  formats: ["webp", "avif", "png"],
+  outputDir: "public/assets/images/astronaut",
+  urlPath: "/assets/images/astronaut",
+});
+
+const avifSrcset = avif.map(({ srcset }) => srcset).join(","); 
+const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
+const pngSrcset = png.map(({ srcset }) => srcset).join(",");
+---
+<div class="relative">
+
+    <picture
+      class="absolute h-full w-full"
+    >
+      <source type="image/avif" srcset={avifSrcset} {sizes} />
+      <source type="image/webp" srcset={webpSrcset} {sizes} />
+      <source type="image/png" srcset={pngSrcset} {sizes} />
+      <img
+        class="object-cover w-full h-full"
+        src={png[0].url}
+        width={png[0].width}
+        height={png[0].height}
+        alt="immo"
+      />
+    </picture>
+
+
+  <div class="relative bg-gray-900 bg-opacity-25">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+          quick, brown fox jumps over a lazy dog
+        </h2>
+        <p class="text-base md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+        </p>
+      </div>
+    </div>  
+
+    </div>
+  </div>
+</div>
+
+<!-- https://github.com/withastro/compiler/issues/395 -->
+<!-- <noscript>
+  <style>
+    #splash-bg-fallback {
+      @apply block;
+    }
+  </style>
+</noscript> -->
+
