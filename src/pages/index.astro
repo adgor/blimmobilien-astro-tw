@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import HeroHome from '~/components/hero-home.astro'
+import ServiceRight from '~/components/ServiceRight.astro'
+
+
 let title = 'Home'
 ---
 
 <BaseLayout title={title}>
+  <HeroHome />
+  <ServiceRight />
 </BaseLayout>
-     
+      
