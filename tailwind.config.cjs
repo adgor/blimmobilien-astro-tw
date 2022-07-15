@@ -10,6 +10,13 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        brand: {
+          yellow: '#D5A44E',
+          yellowLight: '#DFB157',
+          yellowLighten: '#F7CE6E',
+          gunmetal: '#152A37',
+
+        }
       },
       textColor: {
         default: "var(--color-text)",
