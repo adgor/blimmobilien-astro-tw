@@ -12,12 +12,12 @@ const navItems = [
 
 <header
   id="page-header"
-  class="z-10 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
+  class="z-10  bg-brand-gunmetal flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+  <a class="flex items-center gap-3 hover:!text-default" href="/">
+    <h1 class="sr-only">Bl IMMOBILIEN AG</h1>
+    <Icon name="bl-logo" class=" h-14" />
+    <!-- <Icon name="logomark" class="h-10" /> -->
   </a>
   <div>
   <div class="flex items-center gap-6">
@@ -25,7 +25,7 @@ const navItems = [
       <ul class="flex items-center gap-6">
         {navItems.map(({ title, url }) => (
           <li>
-            <a class="text-sm text-gray-500" href={url}>
+            <a class="text-sm text-white hover:text-brand-yellow" href={url}>
               {title}
             </a>
           </li>
@@ -41,7 +41,7 @@ const navItems = [
       <Icon pack="mdi" name="menu" class="h-8" />
     </button>
     </div>
-    <div id="menu-modal" class="hidden modal" aria-hidden="true">
+    <div id="menu-modal" class="hidden absolute z-50 modal" aria-hidden="true">
       <div class="fixed inset-0 px-8 py-4 bg-default">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
@@ -55,7 +55,7 @@ const navItems = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <Icon name="bl-logo-ag" class="h-20" />
           </div>
           <nav>
             <ul class="flex flex-col">
@@ -118,10 +118,6 @@ const navItems = [
 </noscript> -->
 
 <style>
-  .fixed-header {
-    @apply fixed top-0 bottom-auto;
-    @apply text-default bg-default border-default;
-  }
   .modal.is-open {
     @apply block;
   }

@@ -29,6 +29,9 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      dropShadow:{
+        '3xl': '0 62px 54px rgba(0, 0, 0, 0.3)',
+      },
     },
   },
   corePlugins: {
