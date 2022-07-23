@@ -1,8 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-let title = 'Home'
+import Header from '~/components/header.astro'
+
+let title = 'About'
 ---
 
 <BaseLayout title={title}>
+    <Header />
+    <h1 class=" mx-auto  py-60 text-5xl">TODO: {title}</h1>
 </BaseLayout>
      
