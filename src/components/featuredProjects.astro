@@ -4,11 +4,13 @@ import {Icon} from 'astro-icon'
 import FeatOne from '../assets/1.jpg'
 import FeatTwo from '../assets/2.jpg'
 import FeatThree from '../assets/3.jpg'
+
+const {className ='bg-[#F0F6F9] -mt-16  lg:py-32'} = Astro.props 
 ---
 
-<section class=" bg-[#F0F6F9]">
+  <div class={className}>
 
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 -mt-16  lg:py-48">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
     <div class="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-8">
       <div class="flex flex-col
        items-center mb-5 md:mb-6 group ">
@@ -112,5 +114,6 @@ import FeatThree from '../assets/3.jpg'
         </svg>
       </a>
     </div>
+
   </div>
-</section>
+  </div>

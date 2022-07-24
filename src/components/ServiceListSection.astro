@@ -1,0 +1,99 @@
+---
+import {Icon } from 'astro-icon'
+
+const contractorResponsabilities = [
+   {
+    title: "Coordination and mediation functions",
+  },{
+    title: "Responsible for cost compliance and transparency",
+  },{
+    title: "Adherence to schedules and quality.",
+  },
+
+ 
+];
+---
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+  <div class="h-1 mb-5 w-36 rounded-md mr-auto duration-300 origin-left transform bg-gradient-to-r  from-brand-yellowLighten to-brand-gunmetal scale-x-30 hover:scale-x-100"></div>
+   
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-brand-gunmetal sm:text-4xl sm:leading-none">
+            General contractor for new construction or conversion
+        </h2>
+        <p class="text-base mb-9  text-gray-700 ">
+           With the conclusion of a general contractor work contract, B&L Immobilien AG puts its skills as a reputable developer at the service of your construction project. In every phase of the project, we guarantee you economic and maximum efficiency in the way we work.
+        </p>
+        <div class="gap-4 mb-9 items-center ">
+          <ul class="space-y-3">
+
+
+            {contractorResponsabilities.map(({ title }) => (
+           <li class=" text-gray-700 items-center  hover:underline  duration-700 transition text-base flex ">
+           <Icon name='ic:round-check-circle' class='h-6 w-6 text-brand-yellow' /> 
+              <span class=" pl-3" >{title}</span>
+          </li>
+          ))}
+          </ul>
+        </div>
+
+        <div class="flex items-center mt-4">
+          <a href="/" aria-label="" class=" hover:shadow-2xl rounded-tr-3xl inline-flex items-center font-semibold transition-colors duration-200 text-brand-gunmetal bg-brand-yellow shadow-xl px-10 py-4 ">
+          Contact us today
+    <Icon name="heroicons-solid:arrow-narrow-right" class="ml-2 h-5 flex-end  text-white " />
+          </a>
+                  </div>
+      </div>
+      <div class="flex items-center justify-center -mx-4 lg:pl-8">
+        
+        <div class="px-3">
+
+            <div class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-3xl group hover:shadow-4xl ">
+                <div class="p-9">
+                  <div class="flex items-center justify-center w-16 h-16 mb-5 rounded bg-[#FBF6EE]">
+        <Icon name='simple-icons:homeadvisor' class=' w-8 h-8 text-brand-yellow' />
+                  </div>
+                  <p class="mb-4 text-base font-bold text-brand-gunmetal ">Beratung</p>
+                  <p class="text-sm w-48 leading-5 text-gray-500">
+                    We do a free evaluation to be sure you want to start selling.
+                  </p>
+                </div>
+                <div class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-brand-yellow  group-hover:scale-x-100"></div>
+              </div>
+
+            </div>
+        <div class="flex flex-col space-y-6 items-end px-3">
+        
+
+            <div class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-3xl group hover:shadow-4xl ">
+                <div class="p-9">
+                  <div class="flex items-center justify-center w-16 h-16 mb-5 rounded bg-[#FBF6EE]">
+        <Icon name='mdi:floor-plan' class=' w-8 h-8 text-brand-yellow' />
+                  </div>
+                  <p class="mb-4 text-base font-bold text-brand-gunmetal ">Planung</p>
+                  <p class="text-sm w-48 leading-5 text-gray-500">
+                    We do a free evaluation to be sure you want to start selling.
+                  </p>
+                </div>
+                <div class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-brand-yellow  group-hover:scale-x-100"></div>
+              </div>
+
+
+            <div class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-3xl group hover:shadow-4xl ">
+                <div class="p-9">
+                  <div class="flex items-center justify-center w-16 h-16 mb-5 rounded bg-[#FBF6EE]">
+        <Icon name='mdi:home-city' class=' w-8 h-8 text-brand-yellow' />
+                  </div>
+                  <p class="mb-4 text-base font-bold text-brand-gunmetal ">Realisierung</p>
+                  <p class="text-sm w-48 leading-5 text-gray-500">
+                    We do a free evaluation to be sure you want to start selling.
+                  </p>
+                </div>
+                <div class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-brand-yellow  group-hover:scale-x-100"></div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
