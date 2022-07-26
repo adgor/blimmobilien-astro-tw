@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+// import Header from '~/components/header.astro'
+import HeroPages1 from '~/components/heroPages1.astro';
+import imageSrc from '../assets/plane.jpg'
+import ServiceLeftPages from '~/components/ServiceLeftPages.astro';
+import HeaderHome from '~/components/headerHome.astro';
+import FeaturedProjects from '~/components/featuredProjects.astro';
+import ServiceListSection from '~/components/ServiceListSection.astro';
+
+let title = 'Services'
+let className = ' bg-gradient-to-b from-[#F0F6F9] mt-0 lg:py-20'
+---
+
+<BaseLayout title={title}>
+
+    <HeaderHome />
+    <HeroPages1 imageSrc={imageSrc} /> 
+    <ServiceLeftPages />
+    <FeaturedProjects className={className}/>
+    <ServiceListSection />
+</BaseLayout>
+     
